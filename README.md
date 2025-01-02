@@ -390,9 +390,17 @@ C#程序员git clone项目之后，将.env.example改为.env然后填入自己�
 
 我已经发布了一个版本放到GitHub上了，如果上GitHub有问题，也可以联系我。但还是推荐从GitHub上下载，比较安全一点，随便打开别人给的文件不太好。
 
+![image-20250102163753555](https://mingupupup.oss-cn-wuhan-lr.aliyuncs.com/imgs/image-20250102163753555.png)
+
+![image-20250102163814932](https://mingupupup.oss-cn-wuhan-lr.aliyuncs.com/imgs/image-20250102163814932.png)
+
 下载好了之后，解压如下所示：
 
+![image-20250102163832037](https://mingupupup.oss-cn-wuhan-lr.aliyuncs.com/imgs/image-20250102163832037.png)
+
 将.env.example改为.env然后填入自己想要使用的模型与密钥以及Endpoint即可。
+
+![image-20250102163925711](https://mingupupup.oss-cn-wuhan-lr.aliyuncs.com/imgs/image-20250102163925711.png)
 
 以下是手把手的尝试几个不同的平台。
 
