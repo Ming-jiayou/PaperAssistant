@@ -330,3 +330,4 @@ ASALocalRun/
 **/obj/
 **/.vs/
 /src/PaperAssistant/.env
+/src/PaperAssistantB/.env
