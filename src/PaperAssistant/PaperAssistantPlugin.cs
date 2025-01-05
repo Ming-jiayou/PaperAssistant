@@ -24,12 +24,7 @@ namespace PaperAssistant
               modelId: envVars["PaperSummaryModelId"],
               apiKey: envVars["PaperSummaryApiKey"],
               endpoint: new Uri($"{envVars["PaperSummaryEndpoint"]}")
-            );
-            // builder.AddOpenAIChatCompletion(
-            //  modelId: "Qwen/Qwen2.5-72B-Instruct-128K",
-            //  apiKey: "27077583e5ea767c1814bef784addbfc.E8IcjmAR8evERtza",
-            //  endpoint: new Uri("https://open.bigmodel.cn/api/paas/v4")
-            //);
+            );           
 #pragma warning restore SKEXP0010 // 类型仅用于评估，在将来的更新中可能会被更改或删除。取消此诊断以继续。
             InterKernel = builder.Build();
         }
@@ -41,6 +36,8 @@ namespace PaperAssistant
         [return: Description("PDF文档内容")]
         public string ExtractPDFContent(string filePath)
         {
+            Console.WriteLine($"执行函数ExtractPDFContent，参数{filePath}");
+
             StringBuilder text = new StringBuilder();
             // 读取PDF内容
             using (PdfDocument document = PdfDocument.Open(filePath))
@@ -59,6 +56,8 @@ namespace PaperAssistant
         {
             try
             {
+                Console.WriteLine($"执行函数SaveMDNotes，参数1：{filePath},参数2：{mdContent}");
+
                 // 检查文件是否存在，如果不存在则创建
                 if (!File.Exists(filePath))
                 {
@@ -82,6 +81,8 @@ namespace PaperAssistant
         [Description("总结论文内容生成一个md格式的笔记，并将笔记保存到指定路径")]      
         public async void GeneratePaperSummary(string filePath1,string filePath2)
         {
+            Console.WriteLine($"执行函数GeneratePaperSummary，参数1：{filePath1},参数2：{filePath2}");
+
             StringBuilder text = new StringBuilder();
             // 读取PDF内容
             using (PdfDocument document = PdfDocument.Open(filePath1))
